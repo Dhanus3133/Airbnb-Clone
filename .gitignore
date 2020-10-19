@@ -124,3 +124,6 @@ dmypy.json
 
 # Mac
 .DS_Store
+
+#Uploaded Photos
+uploads/
