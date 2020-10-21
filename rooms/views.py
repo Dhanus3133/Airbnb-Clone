@@ -1,5 +1,4 @@
-from django.utils import timezone
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from . import models
 
 
@@ -11,3 +10,12 @@ class HomeView(ListView):
     paginate_orphans = 5
     context_object_name = 'rooms'
     ordering = 'created'
+
+
+class RoomDetail(DetailView):
+    """ RoomDetail Definition """
+
+    model = models.Room
+
+
+
