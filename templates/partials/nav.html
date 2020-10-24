@@ -2,7 +2,11 @@
     <a href="/">Nbnb</a>
     <ul>
         <li>
-            <a href="{% url 'core:home' %}">Login</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'users:logout' %}">Logout</a>
+            {% else %}
+                <a href="{% url 'users:login' %}">Login</a>
+            {% endif %}
         </li>
     </ul>
 </header>
